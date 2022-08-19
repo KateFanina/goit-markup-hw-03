@@ -5,6 +5,7 @@
   --secondary-bg-color: #2f303a;
   --logo-color: #000000;
   --third-bg-color: #f5f4fa;
+  --card-set: 30px;
 }
 
 body {
@@ -107,7 +108,7 @@ ul {
 
 .hat-title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: var(--card-set);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -158,6 +159,7 @@ button {
 .filter-btn:focus {
   background-color: var(--accent-color);
   color: var(--title-text-color);
+  box-shadow: 0px 4px 4px rgba(245, 244, 250, 1);
 }
 
 /* Особливості */
@@ -195,6 +197,7 @@ button {
   line-height: 1.17;
   text-align: center;
 }
+
 img {
   display: block;
   max-width: 100%;
@@ -203,8 +206,9 @@ img {
 /* Kartynki */
 
 .flex-list {
-  margin-bottom: 30px;
-  margin-right: 30px;
+  flex-basis: calc(100% / 3-var(--card-set));
+  margin-bottom: var(--card-set);
+  margin-right: var(--card-set);
 }
 
 .flex-list:nth-child(3n) {
@@ -219,11 +223,12 @@ img {
   border-right: 1px solid rgba(238, 238, 238, 1);
   border-bottom: 1px solid rgba(238, 238, 238, 1);
   border-left: 1px solid rgba(238, 238, 238, 1);
+  padding: 20px 24px;
 }
 
 .list .flex-element + .flex-element,
 .team-list .teams + .teams {
-  margin-left: 30px;
+  margin-left: var(--card-set);
 }
 .teams {
   background-color: var(--title-text-color);
@@ -241,8 +246,13 @@ img {
   background-color: var(--third-bg-color);
 }
 
+.team-text {
+  padding-top: var(--card-set);
+  padding-bottom: var(--card-set);
+}
+
 .team-person {
-  margin-top: 30px;
+  margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -252,7 +262,7 @@ img {
 
 .team-work {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -275,12 +285,13 @@ img {
 /* Футер */
 .footer {
   background-color: var(--secondary-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .contacts {
   display: inline-block;
-  padding-top: 20px;
-  padding-bottom: 60px;
+  padding-left: 0;
   margin: 0;
   font-style: normal;
   font-weight: 400;
@@ -290,8 +301,7 @@ img {
 
 .logo-footer {
   display: block;
-  padding-top: 60px;
-  padding-left: 40px;
+  margin-bottom: 20px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -322,30 +332,31 @@ body .link {
 }
 
 /* Портфолио */
-/* кнопки */
 .filter {
   margin-top: 0;
   margin-bottom: 50px;
-  padding-left: 300px;
-  padding-right: 300px;
+  padding-left: 0;
+  justify-content: center;
+  border: 0;
 }
 
 .filter-btn {
   padding: 6px 22px;
-  margin-left: 8px;
   display: inline-block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
-  border-radius: 4px;
+}
+.item:not(:first-child) {
+  margin-left: 8px;
 }
 
 .filter-btn.all {
   min-width: 73px;
   padding: 6px 25px;
-  margin-left: 0;
 }
+
 .filter-btn.web {
   min-width: 125px;
 }
@@ -363,9 +374,8 @@ body .link {
 }
 
 .text {
-  padding: 20px 24px;
-  padding-bottom: 4px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 4px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -374,7 +384,6 @@ body .link {
 
 .work {
   margin: 0;
-  padding: 0 24px 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
