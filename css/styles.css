@@ -14,9 +14,23 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.page-header {
+  border-bottom: 1px solid #ececec;
+}
+
+.conteiner {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .logo {
+  margin-right: 93px;
   font-family: 'Raleway';
   font-weight: 700;
   font-size: 26px;
@@ -30,18 +44,50 @@ body {
   color: var(--accent-color);
 }
 
-/* site-nav */
+/* Шапка сайта site-nav */
+
 .link:hover,
 .link:focus,
 .link.current {
   color: var(--accent-color);
 }
 
-.site-nav a {
+.site-nav,
+.list,
+.filter {
+  display: flex;
+}
+
+.site-nav,
+.list,
+.team-list,
+.team {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.site-nav .item + .item,
+.list .item + .item {
+  margin-left: 50px;
+}
+
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   font-family: 'Raleway';
   font-weight: 500;
   letter-spacing: 0.02em;
   color: #212121;
+}
+
+ul {
+  list-style: none;
+}
+
+.list {
+  margin-left: auto;
 }
 
 .list .link {
@@ -52,10 +98,16 @@ body {
 
 /* Замовити послугу */
 .hat {
+  margin-top: 0;
+  margin-bottom: 0;
   background-color: var(--secondary-bg-color);
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .hat-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
@@ -66,6 +118,12 @@ body {
 }
 
 /* Кнопки */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 button {
   cursor: pointer;
   font-family: inherit;
@@ -78,6 +136,10 @@ button {
 }
 
 .btn {
+  padding: 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 216px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
@@ -89,6 +151,7 @@ button {
   color: var(--title-text-color);
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: 1px solid transparent;
 }
 
 .filter-btn:hover,
@@ -98,25 +161,70 @@ button {
 }
 
 /* Особливості */
+.section {
+  padding: 94px 0;
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   font-weight: 700;
   text-transform: uppercase;
 }
 
 .section-text {
+  margin-top: 0;
+  margin-bottom: 0;
   line-height: 1.71;
   color: var(--title-color);
 }
 
 /* team-Наша команда */
 .team {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 0;
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+/* Kartynki */
 
+.flex-list {
+  margin-bottom: 30px;
+  margin-right: 30px;
+}
+
+.flex-list:nth-child(3n) {
+  margin-right: 0;
+}
+.flex-element {
+  width: 270px;
+}
+
+.flex-item-border {
+  border-top: 0 solid rgba(238, 238, 238, 1);
+  border-right: 1px solid rgba(238, 238, 238, 1);
+  border-bottom: 1px solid rgba(238, 238, 238, 1);
+  border-left: 1px solid rgba(238, 238, 238, 1);
+}
+
+.list .flex-element + .flex-element,
+.team-list .teams + .teams {
+  margin-left: 30px;
+}
 .teams {
   background-color: var(--title-text-color);
   border-radius: 0px 0px 4px 4px;
@@ -125,10 +233,17 @@ button {
 }
 
 .team-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.team-block {
   background-color: var(--third-bg-color);
 }
 
 .team-person {
+  margin-top: 30px;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -136,6 +251,8 @@ button {
 }
 
 .team-work {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
@@ -155,12 +272,16 @@ button {
   margin: -1px;
 }
 
-/* Contacts */
+/* Футер */
 .footer {
   background-color: var(--secondary-bg-color);
 }
 
 .contacts {
+  display: inline-block;
+  padding-top: 20px;
+  padding-bottom: 60px;
+  margin: 0;
   font-style: normal;
   font-weight: 400;
   line-height: 1.71;
@@ -168,6 +289,9 @@ button {
 }
 
 .logo-footer {
+  display: block;
+  padding-top: 60px;
+  padding-left: 40px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -184,6 +308,9 @@ button {
 .contacts .link {
   color: rgba(255, 255, 255, 0.6);
 }
+.contact-link {
+  margin-bottom: 9px;
+}
 
 body .link {
   text-decoration: none;
@@ -195,14 +322,50 @@ body .link {
 }
 
 /* Портфолио */
+/* кнопки */
+.filter {
+  margin-top: 0;
+  margin-bottom: 50px;
+  padding-left: 300px;
+  padding-right: 300px;
+}
+
 .filter-btn {
+  padding: 6px 22px;
+  margin-left: 8px;
+  display: inline-block;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.62;
   text-align: center;
+  border-radius: 4px;
+}
+
+.filter-btn.all {
+  min-width: 73px;
+  padding: 6px 25px;
+  margin-left: 0;
+}
+.filter-btn.web {
+  min-width: 125px;
+}
+
+.filter-btn.addition {
+  min-width: 112px;
+}
+
+.filter-btn.desin {
+  min-width: 103px;
+}
+
+.filter-btn.marketing {
+  min-width: 130px;
 }
 
 .text {
+  padding: 20px 24px;
+  padding-bottom: 4px;
+  margin: 0;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -210,6 +373,8 @@ body .link {
 }
 
 .work {
+  margin: 0;
+  padding: 0 24px 20px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.88;
