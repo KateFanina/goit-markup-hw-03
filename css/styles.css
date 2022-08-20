@@ -235,9 +235,9 @@ img {
   margin-left: var(--card-set);
 }
 
-.calculation {  
- flex-basis: calc((100% - 3 * var(--card-set)) / 4);
-  }
+.calculation {
+  flex-basis: calc((100% - 3 * var(--card-set)) / 4);
+}
 
 .teams {
   background-color: var(--title-text-color);
@@ -361,27 +361,6 @@ body .link {
 
 .item:not(:first-child) {
   margin-left: 8px;
-}
-
-.filter-btn.all {
-  width: 73px;
-  padding: 6px 25px;
-}
-
-.filter-btn.web {
-  width: 125px;
-}
-
-.filter-btn.addition {
-  width: 112px;
-}
-
-.filter-btn.desin {
-  width: 103px;
-}
-
-.filter-btn.marketing {
-  width: 130px;
 }
 
 .text {
